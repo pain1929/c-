@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
-//Çó ì³²¨ÄÇÆõÊı
+//æ±‚ æ–æ³¢é‚£å¥‘æ•°
 int doSome(int n) {
     int fist = 1;
     int second = 1;
@@ -21,7 +21,7 @@ int doSome(int n) {
     }
 
 }
-//ÅĞ¶ÏºÏÊı 1ÊÇºÏÊı 0ÊÇËØÊı
+//åˆ¤æ–­åˆæ•° 1æ˜¯åˆæ•° 0æ˜¯ç´ æ•°
 int IsHeShu(int num)
 {
     if (num <= 2)
@@ -39,7 +39,7 @@ int IsHeShu(int num)
     return 0;
 }
 
-//ÇóµÚn¸öºÏÊı
+//æ±‚ç¬¬nä¸ªåˆæ•°
 int HeShu(int num)
 {
     int i = 1;
