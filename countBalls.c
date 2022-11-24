@@ -1,7 +1,15 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 #include <stdlib.h>
-//»ñÈ¡Êı×Ö½øÖÆÎ»²ğ·ÖºóÏà¼ÓµÄºÍ
+//------------------------------------------------------------------------------------------------------
+//é¢˜ç›®ï¼šä¸€å…±æœ‰nä¸ªå°çƒï¼ˆåºå·ä» 1-nï¼‰å°†å°çƒçš„åºå·æ•°å­—è¿›åˆ¶ä½æ‹†åˆ†ç›¸åŠ  æŠ•å…¥åˆ°å¯¹åº”æ•°å­—çš„ç®±å­å†… 
+//æ±‚ï¼šå“ªä¸€ä¸ªç®±å­çš„å°çƒæœ€å¤š ä¸€å…±æœ‰å¤šå°‘ä¸ª
+
+
+
+
+//------------------------------------------------------------------------------------------------------
+//è·å–æ•°å­—è¿›åˆ¶ä½æ‹†åˆ†åç›¸åŠ çš„å’Œ
 int getCharSum(int num)
 {
     int s = 1;
@@ -30,7 +38,7 @@ int getCharSum(int num)
 
 int countBalls(int lowLimit, int hightLimit)
 {
-    //·ÖÅäÄÚ´æ
+    //åˆ†é…å†…å­˜
     int* fist = calloc(hightLimit, 8);
     if (fist == NULL)
     {
@@ -39,9 +47,9 @@ int countBalls(int lowLimit, int hightLimit)
     }
     for (int i = lowLimit; i <= hightLimit; i++)
     {
-        //Ã¿´ÎÑ­»·¿ªÊ¼Ç°ÖØÖÃÖ¸Õë
-        //p1 = Ã¿8¸ö×Ö½ÚµÄµÍ4¸ö
-        //p2 = Ã¿8¸ö×Ö½ÚµÄ¸ß4¸ö
+        //æ¯æ¬¡å¾ªç¯å¼€å§‹å‰é‡ç½®æŒ‡é’ˆ
+        //p1 = æ¯8ä¸ªå­—èŠ‚çš„ä½4ä¸ª
+        //p2 = æ¯8ä¸ªå­—èŠ‚çš„é«˜4ä¸ª
         int* p1 = fist;
         int* p2 = fist + 1;
         int sum = getCharSum(i);
@@ -63,7 +71,7 @@ int countBalls(int lowLimit, int hightLimit)
         }
         
     }
-    //¿ªÊ¼±éÀúÖ¸Õë Çó³ö×î¸ß
+    //å¼€å§‹éå†æŒ‡é’ˆ æ±‚å‡ºæœ€é«˜
     int temp = 0;
     int* temp_p = NULL;
     int* p2 = fist + 1;
@@ -76,9 +84,9 @@ int countBalls(int lowLimit, int hightLimit)
         }
         p2 += 2;
     }
-    //´ËÊ±temp_p ¾ÍÊÇ×î¸ßÊıµÄÖ¸Õë
-    printf("×î¸ßÊı£º%d\n", temp);
-    printf("ºÅÂë£º%d", *(temp_p - 1));
+    //æ­¤æ—¶temp_p å°±æ˜¯æœ€é«˜æ•°çš„æŒ‡é’ˆ
+    printf("æœ€é«˜æ•°ï¼š%d\n", temp);
+    printf("å·ç ï¼š%d", *(temp_p - 1));
 
 
     
